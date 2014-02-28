@@ -1,0 +1,15 @@
+{% extends 'AntWebBundle::layout.html.twig' %}
+{% block content %}
+    {{ render(controller('AntWebBundle:Ad:listOneGroup', {
+    'adGroupTemplate':'AntWebBundle:Ad:id_one.html.twig','id': 1
+    })) }}
+
+    {{ render(controller('AntWebBundle:Ad:listOneGroup', {
+    'adGroupTemplate':'AntWebBundle:Ad:id_two.html.twig','id': 2
+    })) }}
+
+    {{ render(controller('AntWebBundle:Ad:listOneGroup', {
+    'adGroupTemplate':'AntWebBundle:Ad:id_three.html.twig','id': 3
+    })) }}
+
+{% endblock %}

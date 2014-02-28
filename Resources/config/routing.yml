@@ -1,0 +1,15 @@
+ant_order:
+    resource: "@AntWebBundle/Resources/config/routing/orderform.yml"
+    prefix:   /order
+
+
+AntWebBundle_news:
+    resource: "@AntWebBundle/Resources/config/routing/news.yml"
+    prefix:   /news
+
+AntWebBundle_page:
+    resource: "@AntWebBundle/Resources/config/routing/page.yml"
+    prefix:   /page
+
+portfolio:
+    pattern: /portfolio

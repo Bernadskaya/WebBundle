@@ -35,8 +35,9 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": { "Ant\\WebBundle\\": "" }
+        "psr-0": { "Ant\\WebBundle": "" }
     },
+    "target-dir": "Ant/WebBundle",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {

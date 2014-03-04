@@ -36,7 +36,7 @@ class Ad
     private $position;
 
     /**
-     * @var \Application\Sonata\MediaBundle\Entity\Media $media
+     * @var \Ant\MediaBundle\Entity\Media $media
      */
     private $media;
 
@@ -154,7 +154,7 @@ class Ad
     /**
      * Set media
      *
-     * @param \Application\Sonata\MediaBundle\Entity\Media $media
+     * @param \Ant\MediaBundle\Entity\Media $media
      *
      * @return News
      */
@@ -168,7 +168,7 @@ class Ad
     /**
      * Get media
      *
-     * @return \Application\Sonata\MediaBundle\Entity\Media
+     * @return \Ant\MediaBundle\Entity\Media
      */
     public function getMedia()
     {

@@ -22,7 +22,7 @@
         <field name="updated" type="datetime">
             <gedmo:timestampable on="update"/>
         </field>
-        <one-to-one field="media" target-entity="Application\Sonata\MediaBundle\Entity\Media" inversed-by="news">
+        <one-to-one field="media" target-entity="Ant\MediaBundle\Entity\Media" inversed-by="news">
             <cascade><cascade-persist/></cascade>
         </one-to-one>
 

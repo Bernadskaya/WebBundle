@@ -23,7 +23,7 @@ class FrontendBuilder extends ContainerAware {
             ->addChild('menu.frontend.news', array('route' => 'news'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
-            ->addChild('menu.frontend.portfolio', array('route' => 'portfolio'))
+            ->addChild('menu.frontend.portfolio', array('route' => ''))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
             ->addChild('menu.frontend.contacts', array('route' => 'contacts'))
@@ -59,7 +59,7 @@ class FrontendBuilder extends ContainerAware {
             ->addChild('menu.frontend.news', array('route' => 'news'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
-            ->addChild('menu.frontend.portfolio', array('route' => 'portfolio'))
+            ->addChild('menu.frontend.portfolio', array('route' => ''))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
             ->addChild('menu.frontend.contacts', array('route' => 'contacts'))

@@ -1,5 +1,5 @@
 {
-    "name": "ant/first-edition",
+    "name": "ant/webbundle",
     "license": "MIT",
     "type": "bundle",
     "description": "The Ant First Edition",
@@ -37,7 +37,6 @@
     "autoload": {
         "psr-0": { "Ant\\WebBundle": "" }
     },
-    "target-dir": "Ant/WebBundle",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {

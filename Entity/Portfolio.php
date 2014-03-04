@@ -54,7 +54,7 @@ class Portfolio {
     private $slug;
 
     /**
-     * @var \Application\Sonata\MediaBundle\Entity\Gallery $gallery
+     * @var \Ant\MediaBundle\Entity\Gallery $gallery
      */
     private $gallery;
     /**
@@ -213,7 +213,7 @@ class Portfolio {
     /**
      * Set gallery
      *
-     * @param \Application\Sonata\MediaBundle\Entity\Gallery $gallery
+     * @param \Ant\MediaBundle\Entity\Gallery $gallery
      *
      * @return Portfolio
      */
@@ -227,7 +227,7 @@ class Portfolio {
     /**
      * Get gallery
      *
-     * @return \Application\Sonata\MediaBundle\Entity\Gallery
+     * @return \Ant\MediaBundle\Entity\Gallery
      *
      */
     public function getGallery()

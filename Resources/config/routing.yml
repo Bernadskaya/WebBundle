@@ -10,6 +10,3 @@ AntWebBundle_news:
 AntWebBundle_page:
     resource: "@AntWebBundle/Resources/config/routing/page.yml"
     prefix:   /page
-
-portfolio:
-    pattern: /portfolio

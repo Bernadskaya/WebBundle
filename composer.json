@@ -35,7 +35,7 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": { "Ant\\WebBundle": "" }
+        "psr-4": { "Ant\\WebBundle\\": "" }
     },
     "minimum-stability": "dev",
     "extra": {

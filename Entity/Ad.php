@@ -36,7 +36,7 @@ class Ad
     private $position;
 
     /**
-     * @var \Ant\MediaBundle\Entity\Media $media
+     * @var \Web\MediaBundle\Entity\Media $media
      */
     private $media;
 
@@ -154,7 +154,7 @@ class Ad
     /**
      * Set media
      *
-     * @param \Ant\MediaBundle\Entity\Media $media
+     * @param \Web\MediaBundle\Entity\Media $media
      *
      * @return News
      */

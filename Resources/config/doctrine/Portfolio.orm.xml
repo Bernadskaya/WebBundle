@@ -17,7 +17,7 @@
         <field name="created" type="datetime">
             <gedmo:timestampable on="create"/>
         </field>
-        <one-to-one field="gallery" target-entity="Ant\MediaBundle\Entity\Gallery" inversed-by="portfolio">
+        <one-to-one field="gallery" target-entity="Web\MediaBundle\Entity\Gallery" inversed-by="portfolio">
             <cascade><cascade-persist/></cascade>
         </one-to-one>
 

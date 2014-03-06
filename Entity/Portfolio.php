@@ -213,7 +213,7 @@ class Portfolio {
     /**
      * Set gallery
      *
-     * @param \Ant\MediaBundle\Entity\Gallery $gallery
+     * @param \Web\MediaBundle\Entity\Gallery $gallery
      *
      * @return Portfolio
      */
@@ -227,7 +227,7 @@ class Portfolio {
     /**
      * Get gallery
      *
-     * @return \Ant\MediaBundle\Entity\Gallery
+     * @return \Web\MediaBundle\Entity\Gallery
      *
      */
     public function getGallery()

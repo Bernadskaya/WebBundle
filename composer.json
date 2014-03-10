@@ -12,8 +12,8 @@
         "sensio/generator-bundle": "~2.3",
         "liip/imagine-bundle": "dev-master",
         "ant/userbundle": "1.1.*@dev",
-        "ant/adminbundle": "1.1.*@dev",
-        "ant/mediabundle": "1.1.*@dev"
+        "ant/adminbundle": "dev-liip",
+        "ant/mediabundle": "dev-liip"
     },
     "autoload": {
         "psr-0": { "Ant\\WebBundle": "" }

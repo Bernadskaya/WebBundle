@@ -17,8 +17,7 @@ sonata_block:
             contexts:   [admin]
         sonata.media.block.media:
             contexts:   [admin]
-        sonata.admin.block.portfolio:
-            contexts:   [admin]
+
 
 sonata_admin:
     security:
@@ -36,7 +35,6 @@ sonata_admin:
     dashboard:
         blocks:
             -
-                position: left
                 type: sonata.admin.block.admin_head
 
     templates:
@@ -100,6 +98,22 @@ knp_paginator:
     template:
         pagination: AntWebBundle::paginator_sliding.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+
+liip_imagine:
+    filter_sets:
+        default_small:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 70], mode: outbound }
+        default_big:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [500, 300], mode: outbound }
+
+
+
 sonata_media:
     # if you don't use default namespace configuration
     class:
@@ -109,22 +123,30 @@ sonata_media:
     default_context: default
     db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
     contexts:
-        default:  # the default context is mandatory
+        default:
             providers:
                 - sonata.media.provider.dailymotion
                 - sonata.media.provider.youtube
                 - sonata.media.provider.image
                 - sonata.media.provider.file
-
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 500 , quality: 70}
-
     cdn:
         server:
-            path: /sym/web/uploads/media # http://media.sonata-project.org/
+            path:  # http://media.sonata-project.org/
 
     filesystem:
         local:
-            directory:  %kernel.root_dir%/../web/uploads/media
+            directory:  %kernel.root_dir%/../web/uploads
             create:     false
+
+    providers:
+        image:
+            thumbnail:  sonata.media.thumbnail.liip_imagine
+        vimeo:
+            thumbnail:  sonata.media.thumbnail.liip_imagine
+        youtube:
+            thumbnail:  sonata.media.thumbnail.liip_imagine
+        dailymotion:
+            thumbnail:  sonata.media.thumbnail.liip_imagine

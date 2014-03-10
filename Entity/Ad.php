@@ -168,7 +168,7 @@ class Ad
     /**
      * Get media
      *
-     * @return \Ant\MediaBundle\Entity\Media
+     * @return \Web\MediaBundle\Entity\Media
      */
     public function getMedia()
     {

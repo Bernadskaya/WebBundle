@@ -1,5 +1,6 @@
 admin:
   actions: Действия
+  title: Ant.Web
 adGroup:
   all: Группы объявлений
   id: ID
@@ -53,7 +54,6 @@ portfolio:
   id: ID
   all: Портфолио
   title: Заголовок
-  text: Текст новости
   metaKey: Ключевые слова
   metaDesc: Описание для поисковых систем
   position: Положение

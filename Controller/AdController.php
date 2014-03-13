@@ -23,8 +23,13 @@ class AdController extends Controller
      */
     public function indexAction()
     {
+        $em = $this->getDoctrine()->getManager();
+        $entities = $em->getRepository('AntWebBundle:Ad')->findAll();
 
-        return $this->render('AntWebBundle:Ad:index.html.twig', array());
+
+
+
+        return $this->render('AntWebBundle:Ad:index.html.twig', array('entities' => $entities,));
     }
 
     /**

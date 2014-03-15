@@ -5,7 +5,28 @@ twig:
     form:
             resources:
                 # other files
-                - 'SonataMediaBundle:Form:media_widgets.html.twig'
+                - 'AntMediaBundle:Form:media_widgets.html.twig'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   %database_driver%
+        host:     %database_host%
+        port:     %database_port%
+        dbname:   %database_name%
+        user:     %database_user%
+        password: %database_password%
+        charset:  UTF8
+        types: #this is about this line and line below
+                    json:     Sonata\Doctrine\Types\JsonType
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: %kernel.root_dir%/data/data.db3
+        # path:     %database_path%
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true
+
 #Sonata Block
 
 sonata_block:
@@ -102,11 +123,16 @@ knp_paginator:
 liip_imagine:
     filter_sets:
         default_small:
-            quality: 75
+            quality: 100
             controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
             filters:
                 thumbnail: { size: [100, 70], mode: outbound }
         default_big:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [500, 300], mode: outbound }
+        admin:
             quality: 75
             controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
             filters:
@@ -130,8 +156,8 @@ sonata_media:
                 - sonata.media.provider.image
                 - sonata.media.provider.file
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
+                small: { width: 200 , quality: 100}
+                big:   { width: 1500 , quality: 100}
     cdn:
         server:
             path:  # http://media.sonata-project.org/

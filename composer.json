@@ -10,7 +10,7 @@
         "knplabs/knp-paginator-bundle": "dev-master",
         "knplabs/knp-menu-bundle":"1.1.2",
         "sensio/generator-bundle": "~2.3",
-        "liip/imagine-bundle": "dev-master",
+        "liip/imagine-bundle": "v0.21.1",
         "ant/userbundle": "1.1.*@dev",
         "ant/adminbundle": "dev-liip",
         "ant/mediabundle": "dev-liip"

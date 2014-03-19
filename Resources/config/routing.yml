@@ -15,10 +15,6 @@ ant_admin:
     resource: "@AntAdminBundle/Resources/config/routing.yml"
     prefix:   /
 
-AntWebBundle_portfolio:
-    resource: "@AntWebBundle/Resources/config/routing/portfolio.yml"
-    prefix:   /portfolio
-
 
 ant_user:
     resource: "@AntUserBundle/Resources/config/routing.xml"

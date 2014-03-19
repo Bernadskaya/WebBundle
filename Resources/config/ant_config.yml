@@ -164,9 +164,8 @@ sonata_media:
 
     filesystem:
         local:
-            directory:  %kernel.root_dir%/../web/uploads
+            directory:  %kernel.root_dir%/../web/uploads/media
             create:     false
-
     providers:
         image:
             thumbnail:  sonata.media.thumbnail.liip_imagine

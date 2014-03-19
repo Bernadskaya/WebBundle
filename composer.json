@@ -5,15 +5,13 @@
     "description": "The Ant First Edition",
 
     "require": {
-        "php": ">=5.3.3",
         "stof/doctrine-extensions-bundle": "~1.1@dev",
-        "knplabs/knp-paginator-bundle": "dev-master",
+        "knplabs/knp-paginator-bundle": "2.4.0",
         "knplabs/knp-menu-bundle":"1.1.2",
         "sensio/generator-bundle": "~2.3",
-        "liip/imagine-bundle": "v0.21.1",
-        "ant/userbundle": "1.1.*@dev",
-        "ant/adminbundle": "dev-liip",
-        "ant/mediabundle": "dev-liip"
+        "ant/userbundle": "1.1.0",
+        "ant/adminbundle": "1.1.0",
+        "ant/mediabundle": "1.1.0"
     },
     "autoload": {
         "psr-0": { "Ant\\WebBundle": "" }
@@ -22,7 +20,7 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1-dev"
+            "dev-master": "1.1.0"
         }
     }
 }

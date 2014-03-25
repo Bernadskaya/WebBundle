@@ -6,6 +6,7 @@ twig:
             resources:
                 # other files
                 - 'AntMediaBundle:Form:media_widgets.html.twig'
+                - 'AntAdminBundle:Form:tinymce.html.twig'
 
 # Doctrine Configuration
 doctrine:

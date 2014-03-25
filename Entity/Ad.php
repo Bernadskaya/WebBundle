@@ -18,6 +18,11 @@ class Ad
     /**
      * @var string
      */
+    private $title;
+
+    /**
+     * @var string
+     */
     private $text;
 
     /**
@@ -51,6 +56,31 @@ class Ad
     {
         return $this->id;
     }
+
+    /**
+     * Set Title
+     *
+     * @param string $title
+     *
+     * @return Ad
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get Title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
 
     /**
      * Set text

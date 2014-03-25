@@ -8,6 +8,7 @@ adGroup:
 ad:
   id: ID
   all: Объявления
+  title: Заголовок
   text: Текст объявления
   file: Изображение
   group: Блок
@@ -18,9 +19,8 @@ ad:
   third: Третий блок
   fourth: Четвертый блок
   fifth: Пятый блок
-
 ads:
-  blocks: Блоки объявлений
+  blocks: "Блоки объявлений"
 order:
   new: Отправьте заявку
 news:

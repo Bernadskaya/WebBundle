@@ -6,10 +6,8 @@
     "description": "The Ant First Edition",
 
     "require": {
-        "stof/doctrine-extensions-bundle": "~1.1@dev",
         "knplabs/knp-paginator-bundle": "2.4.0",
         "knplabs/knp-menu-bundle":"1.1.2",
-        "sensio/generator-bundle": "~2.3",
         "ant/userbundle": "1.1.0.*@dev",
         "ant/adminbundle": "1.1.0.*@dev",
         "ant/mediabundle": "1.1.0.*@dev"

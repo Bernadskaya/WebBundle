@@ -1,6 +1,7 @@
+content:  Разделы
 admin:
   actions: Действия
-  title: Ant.Web
+  title: MuraveyWeb
 adGroup:
   all: Группы объявлений
   id: ID
@@ -90,7 +91,7 @@ order:
   phone: Телефон
   create: Отправить
 news:
-  all: Все новости
+  all: Новости
   list:  Новости
   read:  Подробнее
   back:  Назад

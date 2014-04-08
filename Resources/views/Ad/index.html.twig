@@ -19,7 +19,7 @@
     {{ include('AntWebBundle:Ad:id_two.html.twig') }}
     {{ include('AntWebBundle:Ad:id_three.html.twig') }}
 
-    {{ render(controller('AntMediaBundle:Gallery:index')) }}
+    {{ render(controller('AntMediaBundle:Gallery:last', {'max': 2})) }}
 
 
 {% endblock %}

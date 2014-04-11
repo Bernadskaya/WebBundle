@@ -2,8 +2,14 @@
 
 {% block content %}
 
-    <ol class="breadcrumb"><li>Главная</li><li><a href="{{ path('portfolio') }}">Портфолио</a></li></ol>
     <div class="row">
+
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="alert alert-success">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+
         <h1> {{ 'order.new'|trans({}, 'AntWebBundle') }}</h1>
         <div class="col-md-6">
             {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}

@@ -29,8 +29,12 @@ class OrderFormController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'notice',
+                'Your changes were saved!'
+            );
 
-            return $this->redirect($this->generateUrl('order_show', array('id' => $entity->getId())));
+//            return $this->redirect($this->generateUrl('order_show', array('id' => $entity->getId())));
         }
 
         return $this->render('AntWebBundle:OrderForm:new.html.twig', array(
@@ -49,7 +53,7 @@ class OrderFormController extends Controller
     private function createCreateForm(OrderForm $entity)
     {
         $form = $this->createForm(new OrderFormType(), $entity, array(
-            'action' => $this->generateUrl('order_create'),
+            'action' => $this->generateUrl('order_create_front'),
             'method' => 'POST',
         ));
 

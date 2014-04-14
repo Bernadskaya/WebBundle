@@ -8,6 +8,7 @@
     "require": {
         "knplabs/knp-paginator-bundle": "2.4.0",
         "knplabs/knp-menu-bundle":"1.1.2",
+        "gregwar/captcha-bundle": "v1.0.11",
         "ant/userbundle": "1.1.0.*@dev",
         "ant/adminbundle": "1.1.0.*@dev",
         "ant/mediabundle": "1.1.0.*@dev"

@@ -31,6 +31,7 @@ class OrderFormType extends AbstractType
                 'required' => true,
                 'attr' => array('class'=>'form-control'),
                 'label'=>'order.phone'))
+            ->add('captcha', 'captcha');
         ;
     }
     

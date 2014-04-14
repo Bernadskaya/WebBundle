@@ -138,3 +138,4 @@ liip_imagine:
             filters:
                 thumbnail: { size: [500, 300], mode: outbound }
 
+gregwar_captcha: ~

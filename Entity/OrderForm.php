@@ -36,6 +36,11 @@ class OrderForm
     private $phone;
 
     /**
+     * @var string
+     */
+    private $text;
+
+    /**
      * @var \DateTime
      * @Gedmo\Timestampable(on="create")
      */
@@ -146,6 +151,31 @@ class OrderForm
     public function getPhone()
     {
         return $this->phone;
+    }
+
+
+    /**
+     * Set text
+     *
+     * @param string $text
+     *
+     * @return OrderForm
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return string
+     */
+    public function getText()
+    {
+        return $this->text;
     }
 
     /**

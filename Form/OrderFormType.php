@@ -23,7 +23,7 @@ class OrderFormType extends AbstractType
                 'required' => true,
                 'attr' => array('class'=>'form-control'),
                 'label'=>'order.surname'))
-            ->add('email','text', array (
+            ->add('email','email', array (
                 'required' => true,
                 'attr' => array('class'=>'form-control'),
                 'label'=>'order.email'))
@@ -31,6 +31,10 @@ class OrderFormType extends AbstractType
                 'required' => true,
                 'attr' => array('class'=>'form-control'),
                 'label'=>'order.phone'))
+            ->add('text','textarea', array (
+                'required' => false,
+                'attr' => array('class'=>'form-control'),
+                'label'=>'order.text'))
             ->add('captcha', 'captcha');
         ;
     }

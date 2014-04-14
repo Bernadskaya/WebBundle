@@ -89,6 +89,7 @@ order:
   surname: Фамилия
   email: E-mail
   phone: Телефон
+  text: Сообщение
   create: Отправить
 news:
   all: Новости

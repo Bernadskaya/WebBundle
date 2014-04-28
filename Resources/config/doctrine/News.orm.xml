@@ -12,10 +12,10 @@
         <field name="slug" type="string" length="156" unique="true">
             <gedmo:slug unique="true" updatable="false" separator="-" fields="title"/>
         </field>
-        <field name="description" type="text" column="description"/>
-        <field name="text" type="text" column="text"/>
-        <field name="metaKey" type="string" column="metaKey" length="255"/>
-        <field name="metaDesc" type="string" column="metaDesc" length="255"/>
+        <field name="description" type="text" column="description" nullable="true"/>
+        <field name="text" type="text" column="text" nullable="true"/>
+        <field name="metaKey" type="string" column="metaKey" length="255" nullable="true"/>
+        <field name="metaDesc" type="string" column="metaDesc" length="255" nullable="true"/>
         <field name="created" type="datetime">
             <gedmo:timestampable on="create"/>
         </field>
@@ -25,6 +25,5 @@
         <one-to-one field="media" target-entity="Ant\MediaBundle\Entity\Media" inversed-by="news">
             <cascade><cascade-persist/></cascade>
         </one-to-one>
-
     </entity>
 </doctrine-mapping>

@@ -6,20 +6,16 @@
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
-
         <field name="title" type="text" column="title" length="100" />
-        <field name="text" type="text" column="text"/>
+        <field name="text" type="text" column="text" nullable="true"/>
+        <field name="icon" type="integer" column="icon" nullable="true"/>
         <field name="url" type="string" column="url" length="100" nullable="true"/>
-        <field name="position" type="integer" column="position"/>
-
+        <field name="position" type="integer" column="position" nullable="true"/>
         <one-to-one field="media" target-entity="Ant\MediaBundle\Entity\Media" inversed-by="ad">
             <cascade><cascade-persist/></cascade>
         </one-to-one>
-
         <many-to-one field="adGroup" target-entity="AdGroup">
-            <join-column name="adGroup_id" referenced-column-name="id"/>
+            <join-column name="adGroup_id" referenced-column-name="id" nullable="true"/>
         </many-to-one>
-
-
     </entity>
 </doctrine-mapping>

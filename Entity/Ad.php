@@ -41,6 +41,11 @@ class Ad
     private $position;
 
     /**
+     * @var integer
+     */
+    private $icon;
+
+    /**
      * @var \Ant\MediaBundle\Entity\Media $media
      */
     private $media;
@@ -179,6 +184,30 @@ class Ad
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set icon
+     *
+     * @param integer $icon
+     *
+     * @return Ad
+     */
+    public function setIcon($icon)
+    {
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    /**
+     * Get icon
+     *
+     * @return integer
+     */
+    public function getIcon()
+    {
+        return $this->icon;
     }
 
     /**

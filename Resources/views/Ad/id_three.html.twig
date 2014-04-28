@@ -7,7 +7,8 @@
             {% if entity.getMedia %}
                 <img src="{% path entity.getMedia, 'small' %}">
             {% endif %}
-            {{ entity.text|raw('html') }}
+        <span class="{{ entity.icon }}"></span>
+        {{ entity.text|raw('html') }}
         </div>
     {% endif %}
     {% endfor %}

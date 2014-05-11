@@ -31,7 +31,7 @@ class OrderFormController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'notice',
-                'Your changes were saved!'
+                'order.send'
             );
 
 //            return $this->redirect($this->generateUrl('order_show', array('id' => $entity->getId())));

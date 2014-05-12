@@ -16,8 +16,8 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             {#{% for entity in ad %}#}
-            {% for entity in entities %}
-                {% if entity.getAdGroup.id == '1'  %}
+            {% for entity in entities if entity.active %}
+                {% if entity.getAdGroup.id == '1' %}
                     {% if loop.first %}
                         <div class="item active">
                             <img src="{% path entity.getMedia, 'small' %}">

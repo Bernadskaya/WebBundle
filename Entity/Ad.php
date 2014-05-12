@@ -46,6 +46,11 @@ class Ad
     private $icon;
 
     /**
+     * @var boolean
+     */
+    private $active;
+
+    /**
      * @var \Ant\MediaBundle\Entity\Media $media
      */
     private $media;
@@ -215,7 +220,7 @@ class Ad
      *
      * @param \Ant\MediaBundle\Entity\Media $media
      *
-     * @return News
+     * @return Ad
      */
     public function setMedia($media)
     {
@@ -232,5 +237,29 @@ class Ad
     public function getMedia()
     {
         return $this->media;
+    }
+
+    /**
+     * Set active
+     *
+     * @param boolean $active
+     *
+     * @return Ad
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+
+        return $this;
+    }
+
+    /**
+     * Get active
+     *
+     * @return boolean
+     */
+    public function getActive()
+    {
+        return $this->active;
     }
 }

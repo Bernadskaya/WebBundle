@@ -11,6 +11,7 @@
         <field name="icon" type="text" column="icon" nullable="true"/>
         <field name="url" type="string" column="url" length="100" nullable="true"/>
         <field name="position" type="integer" column="position" nullable="true"/>
+        <field name="active" type="boolean" column="active" nullable="true"/>
         <one-to-one field="media" target-entity="Ant\MediaBundle\Entity\Media" inversed-by="ad">
             <cascade><cascade-persist/></cascade>
         </one-to-one>

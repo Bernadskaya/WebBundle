@@ -21,6 +21,7 @@ ad:
   fourth: Четвертый блок
   fifth: Пятый блок
   icon: Иконка
+  active: Активное
 ads:
   blocks: "Блоки объявлений"
 order:

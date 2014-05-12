@@ -1,6 +1,7 @@
 {% extends 'AntWebBundle::layout.html.twig' %}
 
 {% block content %}
+    {% trans_default_domain "AntWebBundle" %}
 
 
     <div class="container" id="main">
@@ -8,7 +9,7 @@
             <h1 class="hr2 text-center"> {{ 'order.new'|trans({}, 'AntWebBundle') }}</h1>
             {% for flashMessage in app.session.flashbag.get('notice') %}
                 <div class="alert alert-success">
-                    {{ flashMessage|trans}}
+                    {{ flashMessage|trans }}
                 </div>
             {% endfor %}
             <div class="col-sm-12 col-md-6 col-md-offset-3">
@@ -76,12 +77,16 @@
                         {{ form_label(form.captcha, 'Введите код с картинки', {'label_attr': {'class': 'control-label'}}) }}
                     </div>
                     <div class="col-sm-3">
+
                         {{ form_widget(form.captcha,  {'attr': {'class': 'form-control'}}) }}
                     </div>
-                    <div class="alert-danger">
+
+                </div>
+                {% if form_errors(form.captcha) %}
+                    <div class="alert-danger row">
                         {{ form_errors(form.captcha) }}
                     </div>
-                </div>
+                {% endif %}
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9 text-center">
                         {{ form_widget(form.submit,  { 'label': 'Отправить заявку' , 'attr': {'class': 'btn btn-lg btn-primary'}}) }}

@@ -22,10 +22,11 @@ class AdRepository extends EntityRepository{
             ->getResult();
     }
 
-    public function findAll()
+    public function findAllActive()
 
     {
-        return $this->findBy(array(), array('position' => 'ASC'));
+        return $this->findBy(array('active' => true), array('position'=>'ASC'));
+
     }
 
 }

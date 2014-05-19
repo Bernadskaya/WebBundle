@@ -39,6 +39,10 @@ class OrderForm
      * @var string
      */
     private $text;
+    /**
+     * @var boolean
+     */
+    private $agreement;
 
     /**
      * @var \DateTime
@@ -186,6 +190,29 @@ class OrderForm
     public function getCreated()
     {
         return $this->created;
+    }
+    /**
+     * Set agreement
+     *
+     * @param boolean $agreement
+     *
+     * @return OrderForm
+     */
+    public function setAgreement($agreement)
+    {
+        $this->agreement = $agreement;
+
+        return $this;
+    }
+
+    /**
+     * Get agreement
+     *
+     * @return boolean
+     */
+    public function getAgreement()
+    {
+        return $this->agreement;
     }
 }
 

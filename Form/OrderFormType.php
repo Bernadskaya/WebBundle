@@ -35,6 +35,10 @@ class OrderFormType extends AbstractType
                 'required' => true,
                 'attr' => array('class'=>'form-control'),
                 'label'=>'order.text'))
+            ->add('agreement','checkbox', array (
+                'required' => true,
+                'attr' => array('class'=>'form-control'),
+                'label'=>'order.agreement'))
             ->add('captcha', 'captcha');
         ;
     }

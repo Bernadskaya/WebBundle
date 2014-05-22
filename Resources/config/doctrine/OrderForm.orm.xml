@@ -9,8 +9,8 @@
     </id>
     <field name="name" type="string" column="name" length="50"/>
     <field name="surname" type="string" column="surname" length="100"/>
-    <field name="email" type="string" column="email" length="50"/>
-    <field name="phone" type="string" column="phone" length="11"/>
+    <field name="email" type="string" column="email" length="50" nullable="true"/>
+    <field name="phone" type="string" column="phone" length="12"/>
     <field name="text" type="string" column="text" length="250"/>
     <field name="agreement" type="boolean" column="agreement" length="1"/>
     <field name="created" type="datetime">

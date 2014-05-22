@@ -6,7 +6,7 @@
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
-        <field name="title" type="text" column="title" length="100" />
+        <field name="title" type="text" column="title" length="200" nullable="true"/>
         <field name="text" type="text" column="text" nullable="true"/>
         <field name="icon" type="text" column="icon" nullable="true"/>
         <field name="url" type="string" column="url" length="100" nullable="true"/>

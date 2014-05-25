@@ -42,7 +42,7 @@ class OrderForm
     /**
      * @var boolean
      */
-    private $agreement;
+    private $agreement=true;
 
     /**
      * @var \DateTime

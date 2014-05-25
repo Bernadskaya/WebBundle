@@ -4,7 +4,6 @@ namespace Ant\WebBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Ant\WebBundle\Entity\OrderForm;
 use Ant\WebBundle\Form\OrderFormType;
 
@@ -29,13 +28,30 @@ class OrderFormController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
+            $message = \Swift_Message::newInstance()
+                ->setSubject('order')
+                ->setFrom($form->get('email')->getData())
+                ->setTo('info@muraveyweb.ru')
+                ->setBody(
+                    $this->renderView(
+                        'AntWebBundle:OrderForm:email.txt.twig',
+                        array(
+                            'name' => $form->get('name')->getData(),
+                            'text' => $form->get('text')->getData()
+                        )
+                    )
+                );
+
+            $this->get('mailer')->send($message);
             $this->get('session')->getFlashBag()->add(
                 'notice',
-                'order.send'
+                'Сообщение отправлено!'
             );
 
 //            return $this->redirect($this->generateUrl('order_show', array('id' => $entity->getId())));
         }
+
+
 
         return $this->render('AntWebBundle:OrderForm:new.html.twig', array(
             'entity' => $entity,
@@ -59,6 +75,9 @@ class OrderFormController extends Controller
 
         $form->add('submit', 'submit', array('label' => 'Create'));
 
+
+
+
         return $form;
     }
 
@@ -76,5 +95,6 @@ class OrderFormController extends Controller
             'form'   => $form->createView(),
         ));
     }
+
 
 }

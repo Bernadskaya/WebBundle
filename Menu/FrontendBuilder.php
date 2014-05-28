@@ -23,10 +23,10 @@ class FrontendBuilder extends ContainerAware {
             ->addChild('menu.frontend.news', array('route' => 'news'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
-            ->addChild('menu.frontend.portfolio', array('route' => ''))
+            ->addChild('menu.frontend.portfolio', array('route' => 'sonata_media_gallery_index'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
-            ->addChild('menu.frontend.contacts', array('route' => 'contacts'))
+            ->addChild('menu.frontend.contacts', array('uri' => '#contacts'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
             ->addChild('menu.frontend.order', array('route' => 'order_new'))
@@ -36,7 +36,7 @@ class FrontendBuilder extends ContainerAware {
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu['menu.frontend.services']->setUri('#');
         $menu['menu.frontend.services']
-            ->addChild('menu.frontend.services_1', array('route' => 'services_1'))
+            ->addChild('menu.frontend.services_1', array('uri' => '#services_1'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu['menu.frontend.services'
             ]->addChild('menu.frontend.services_2', array('route' => ''))
@@ -62,7 +62,7 @@ class FrontendBuilder extends ContainerAware {
             ->addChild('menu.frontend.portfolio', array('route' => ''))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
-            ->addChild('menu.frontend.contacts', array('route' => 'contacts'))
+            ->addChild('menu.frontend.contacts', array('uri' => '#contacts'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu
             ->addChild('menu.frontend.order', array('route' => 'order_new'))
@@ -72,7 +72,7 @@ class FrontendBuilder extends ContainerAware {
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu['menu.frontend.services']->setUri('#');
         $menu['menu.frontend.services']
-            ->addChild('menu.frontend.services_1', array('route' => 'services_1'))
+            ->addChild('menu.frontend.services_1', array('uri' => '#services_1'))
             ->setExtra('translation_domain', 'AntWebBundle');
         $menu['menu.frontend.services'
         ]->addChild('menu.frontend.services_2', array('route' => ''))

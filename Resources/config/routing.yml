@@ -3,21 +3,13 @@ ant_order:
     prefix:   /order
 
 
-AntWebBundle_news:
+ant_news:
     resource: "@AntWebBundle/Resources/config/routing/news.yml"
     prefix:   /news
 
-AntWebBundle_page:
-    resource: "@AntWebBundle/Resources/config/routing/page.yml"
-    prefix:   /page
 
 ant_admin:
     resource: "@AntAdminBundle/Resources/config/routing.yml"
-    prefix:   /
-
-
-ant_user:
-    resource: "@AntUserBundle/Resources/config/routing.xml"
     prefix:   /
 
 
@@ -25,9 +17,6 @@ ad:
     pattern:  /
     defaults: { _controller: "AntWebBundle:Ad:index" }
 
-_show:
-    pattern:  /{id}/show
-    defaults: { _controller: "AntWebBundle:Ad:show" }
 
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
@@ -63,9 +52,13 @@ fos_user_change_password:
 
 
 gallery:
-    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    resource: '@AntMediaBundle/Resources/config/routing/gallery.yml'
     prefix: /media/gallery
 
 media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
+
+#gregwar_captcha_routing:
+#    resource: "@GregwarCaptchaBundle/Resources/config/routing/routing.yml"
+#    prefix: /_gcb

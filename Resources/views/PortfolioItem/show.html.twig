@@ -4,6 +4,7 @@
     <meta name="keywords" content="{{ portfolio.metaKey }}">
     <meta name="description" content="{{ portfolio.metaDesc }}">
 {% endblock %}
+{% block title %}{{ portfolio.title }}{% endblock %}
 {% block stylesheets %}
 {{ parent() }}
     <link rel="stylesheet" href="{{ asset('bundles/ant/css/slimbox.css') }}" type="text/css" media="all" filter="cssrewrite" />

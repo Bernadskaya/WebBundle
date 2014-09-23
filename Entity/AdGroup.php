@@ -51,4 +51,5 @@ class AdGroup
     {
         return $this->title;
     }
+
 }

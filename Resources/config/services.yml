@@ -1,4 +1,5 @@
-
-
-
-
+services:
+    ant.orderform:
+        class: Ant\WebBundle\Controller\OrderFormController
+        arguments:
+            - %ant.mailto%

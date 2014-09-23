@@ -3,6 +3,7 @@
     <meta name="keywords" content="{{ entity.metaKey }}">
     <meta name="description" content="{{ entity.metaDesc }}">
 {% endblock %}
+{% block title %}{{ entity.title }}{% endblock %}
 {% block content %}
     {% trans_default_domain "AntWebBundle" %}
     <div class="breadcrumb">
@@ -14,8 +15,8 @@
         {{ entity.created|date('d.m.y H:i') }}
     </div>
     <div class="media">
-        {% if entity.getWebPath %}
-            <img src="{{ entity.getWebPath | imagine_filter('my_thumb_out')  }}" class="img-rounded img-responsive media-object pull-left" />
+        {% if entity.getMedia %}
+            <img src="{% path entity.getMedia, 'big' %}" class="img-rounded img-responsive media-object pull-left" />
         {% endif %}
         <div class="media-body">
             <h1 class="media-heading">{{ entity.title }}</h1>
@@ -26,4 +27,13 @@
             {{ 'news.updated'| trans({}, 'AntWebBundle') }}  {{ entity.updated|date('d.m.y H:i') }}
         </div>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> FETCH_HEAD
+=======
+
+>>>>>>> FETCH_HEAD
+    {{ render(controller('AntWebBundle:News:other', {'id': entity.id})) }}
 {% endblock %}

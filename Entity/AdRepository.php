@@ -22,6 +22,12 @@ class AdRepository extends EntityRepository{
             ->getResult();
     }
 
+    public function findActiveGroup()
+
+    {
+        return $this->findBy(array('active' => true), array('position'=>'ASC'));
+
+    }
     public function findAllActive()
 
     {

@@ -1,8 +1,10 @@
 {% for entity in entities %}
     {% if entity.getAdGroup.id == '1'  %}
+    {% if entity.getAdGroup %}
         {% if loop.first %}
             {{ entity.getAdGroup.title }}
         {% endif %}
+    {% endif %}
     {% endif %}
 {% endfor %}
 <div class="row">

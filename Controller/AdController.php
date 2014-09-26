@@ -4,7 +4,7 @@ namespace Ant\WebBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Ant\WebBundle\Entity\Ad;
 use Ant\WebBundle\Entity\AdGroup;
 
@@ -19,17 +19,35 @@ class AdController extends Controller
 
     /**
      * Lists all Ad entities.
-     *
+     * @Cache(expires="+7 days")
      */
+
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-//        $entities = $em->getRepository('AntWebBundle:Ad')->findAllActive();
+        $repository = $em->getRepository('AntWebBundle:Ad');
 
 
-        $repository = $em
-            ->getRepository('AntWebBundle:Ad');
+        $oneGroupAds = $em->getRepository('AntWebBundle:Ad')->findByAdGroup(1);
+        $oneGroup = $em->find('AntWebBundle:AdGroup', 1);
+
+        $twoGroupAds = $em->getRepository('AntWebBundle:Ad')->findByAdGroup(2);
+        $twoGroup = $em->find('AntWebBundle:AdGroup', 2);
+
+        $threeGroupAds = $em->getRepository('AntWebBundle:Ad')->findByAdGroup(3);
+        $threeGroup = $em->find('AntWebBundle:AdGroup', 3);
+
+        $fourGroupAds = $em->getRepository('AntWebBundle:Ad')->findByAdGroup(4);
+        $fourGroup = $em->find('AntWebBundle:AdGroup', 4);
+
+        $fiveGroupAds = $em->getRepository('AntWebBundle:Ad')->findByAdGroup(5);
+        $fiveGroup = $em->find('AntWebBundle:AdGroup', 5);
+
+        $sixGroupAds = $em->getRepository('AntWebBundle:Ad')->findByAdGroup(6);
+        $sixGroup = $em->find('AntWebBundle:AdGroup', 6);
+
 
         $entities = $repository->findBy(
             array('active' => true),
@@ -39,6 +57,18 @@ class AdController extends Controller
 
         return $this->render('AntWebBundle:Ad:index.html.twig', array(
             'entities' => $entities,
+            'oneGroup' => $oneGroup,
+            'oneGroupAds' => $oneGroupAds,
+            'twoGroup' => $twoGroup,
+            'twoGroupAds' => $twoGroupAds,
+            'threeGroup' => $threeGroup,
+            'threeGroupAds' => $threeGroupAds,
+            'fourGroup' => $fourGroup,
+            'fourGroupAds' => $fourGroupAds,
+            'fiveGroup' => $fiveGroup,
+            'fiveGroupAds' => $fiveGroupAds,
+            'sixGroup' => $sixGroup,
+            'sixGroupAds' => $sixGroupAds,
         ));
     }
 

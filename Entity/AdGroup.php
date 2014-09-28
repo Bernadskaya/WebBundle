@@ -17,6 +17,27 @@ class AdGroup
      */
     private $title;
 
+    /**
+     * @var boolean
+     */
+    private $enabled;
+
+    /**
+     * @param boolean $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
 
     /**
      * Get id

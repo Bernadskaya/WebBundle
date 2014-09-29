@@ -20,6 +20,12 @@ class Category
      * @var string
      */
     private $name;
+    /**
+     * @var string
+     */
+    private $title;
+
+
 
     /**
      * @var string
@@ -108,5 +114,19 @@ class Category
     {
         return $this->getName() ?: '-';
     }
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
 
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
 }

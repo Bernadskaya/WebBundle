@@ -4,7 +4,8 @@
     <id name="id" type="integer" column="id">
       <generator strategy="AUTO"/>
     </id>
-    <field name="name" type="string" column="name" length="255"/>
+    <field name="name" type="string" length="255"/>
+    <field name="title" type="string" length="255"/>
       <many-to-many field="galleries" mapped-by="categories" target-entity="\Ant\MediaBundle\Entity\Gallery"/>
   </entity>
 </doctrine-mapping>

@@ -14,7 +14,7 @@ use Doctrine\ORM\EntityRepository;
 class NewsRepository extends EntityRepository {
 
     public function findAll(){
-        return $this->findBy(array(), array('created'=>'DESC'));
+        return $this->findBy(array('enabled'=>true), array('created'=>'DESC'));
 
     }
 

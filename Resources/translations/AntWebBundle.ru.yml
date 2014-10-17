@@ -38,6 +38,7 @@ news:
   path: Имя файла
   created: Время создания
   updated: Последнее обновление
+  enabled: Опубликовано
   id: ID
 orders:
   all: Заявки

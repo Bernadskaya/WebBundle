@@ -18,7 +18,20 @@ class NewsRepository extends EntityRepository {
 
     }
 
+    public function findLast($max){
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('n')
+            ->from('AntWebBundle:News', 'n')
+            ->setMaxResults($max)
+            ->orderBy('n.created', 'DESC')
+        ;
 
+        $query = $qb->getQuery();
+
+        $result = $query->getResult();
+        return $result;
+
+    }
     public function findOther($id, $max){
 
         $qb = $this->getEntityManager()->createQueryBuilder();

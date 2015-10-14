@@ -53,6 +53,13 @@ class NewsController extends Controller
         ));
     }
 
+    public function lastAction($max) {
+        $em = $this->getDoctrine()->getManager();
+        $lastNews = $em->getRepository('AntWebBundle:News')->findLast($max);
+        return $this->render('AntWebBundle:News:last.html.twig', array(
+            'lastNews' => $lastNews,
+        ));
+    }
     /*
      * Find and display other News
      */
